@@ -7,19 +7,8 @@ import 'package:sendbird_sdk/sdk/sendbird_sdk_api.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  _initializeSendbird();
-  runApp(const MyApp());
-}
 
-Future<void> _initializeSendbird() async {
-  final sendbird = SendbirdSdk(appId: ConfigFile.appId);
-  try {
-    await sendbird.connect(ConfigFile.userId,
-        accessToken: ConfigFile.accessToken);
-    log("connected");
-  } catch (e) {
-    log("not connected");
-  }
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

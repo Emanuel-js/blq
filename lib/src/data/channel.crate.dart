@@ -20,16 +20,17 @@ class ChannelManager {
 
       channel.sendUserMessage(params);
     } catch (e) {
-      // Handle errors appropriately
       print('Error sending message: $e');
     }
   }
 
   Future<User> initializeSendbird() async {
     final sendbird = SendbirdSdk(appId: ConfigFile.appId);
+
     try {
       final user = await sendbird.connect(ConfigFile.userId,
           accessToken: ConfigFile.accessToken);
+
       return user;
     } catch (e) {
       log("not connected");

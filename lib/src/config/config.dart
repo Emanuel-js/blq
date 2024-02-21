@@ -4,4 +4,5 @@ class ConfigFile {
   static const String channelUrl =
       'sendbird_open_channel_14092_bf4075fbb8f12dc0df3ccc5c653f027186ac9211';
   static const String accessToken = 'f93b05ff359245af400aa805bafd2a091a173064';
+  static const String avatorUrl = 'https://i.pravatar.cc/100?u';
 }
